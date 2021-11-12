@@ -3,6 +3,35 @@ entries:
   argo-cd:
   - annotations:
       artifacthub.io/changes: |
+        - "[Added]: Signature keys for GPG in additionalProjects"
+    apiVersion: v2
+    appVersion: v2.1.6
+    created: "2021-11-12T15:40:56.247077582Z"
+    dependencies:
+    - condition: redis-ha.enabled
+      name: redis-ha
+      repository: https://dandydeveloper.github.io/charts/
+      version: 4.12.17
+    description: A Helm chart for ArgoCD, a declarative, GitOps continuous delivery
+      tool for Kubernetes.
+    digest: b48a1670a5824c290bb791a45ed14410dab6d8b93512f476d6d460c0cc33564c
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - gitops
+    maintainers:
+    - name: alexec
+    - name: alexmt
+    - name: jessesuen
+    - name: seanson
+    name: argo-cd
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argo-cd-3.26.8/argo-cd-3.26.8.tgz
+    version: 3.26.8
+  - annotations:
+      artifacthub.io/changes: |
         - "[Added]: Ability to create network policies"
         - "[Changed]: Fix icon url"
     apiVersion: v2
@@ -60,6 +89,30 @@ entries:
   argo-events:
   - annotations:
       artifacthub.io/changes: |
+        - "[Changed]: Update to Argo Events v1.5.0"
+    apiVersion: v2
+    appVersion: v1.5.0
+    created: "2021-11-12T15:40:56.435391007Z"
+    description: A Helm chart to install Argo-Events in k8s Cluster
+    digest: a7c64c60c5bccce7f48b1343148fe32314083c82ffef232fae481b9221602998
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argoproj.github.io/argo-events/assets/logo.png
+    keywords:
+    - argo-events
+    - sensor-controller
+    - eventsource-controller
+    - eventbus-controller
+    maintainers:
+    - name: VaibhavPage
+    - name: whynowy
+    name: argo-events
+    sources:
+    - https://github.com/argoproj/argo-events
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argo-events-1.8.0/argo-events-1.8.0.tgz
+    version: 1.8.0
+  - annotations:
+      artifacthub.io/changes: |
         - "[Added]: Initialize Changelog"
     apiVersion: v2
     appVersion: 1.3.1
@@ -106,6 +159,24 @@ entries:
   argo-rollouts:
   - annotations:
       artifacthub.io/changes: |
+        - "[Added]: Support for extraContainers for controller deployment"
+    apiVersion: v2
+    appVersion: v1.1.0
+    created: "2021-11-12T15:40:56.636117932Z"
+    description: A Helm chart for Argo Rollouts
+    digest: 6c9083d06a2fa4aa011f7d758c359f68c8030b0c02fef0a7031d6ce64b52f78e
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argoproj.github.io/argo-rollouts/assets/logo.png
+    maintainers:
+    - name: alexmt
+    - name: dthomson25
+    - name: jessesuen
+    name: argo-rollouts
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argo-rollouts-2.4.0/argo-rollouts-2.4.0.tgz
+    version: 2.4.0
+  - annotations:
+      artifacthub.io/changes: |
         - "[Added]: Initialize Changelog"
     apiVersion: v2
     appVersion: v1.0.2
@@ -138,6 +209,28 @@ entries:
     - https://github.com/zorgdomein/argo-helm/releases/download/argo-rollouts-0.5.4/argo-rollouts-0.5.4.tgz
     version: 0.5.4
   argo-workflows:
+  - annotations:
+      artifacthub.io/changes: |
+        - "[Changed]: Restore RBAC permissions and clarify namespace settings."
+    apiVersion: v2
+    appVersion: v3.2.0
+    created: "2021-11-12T15:40:56.834266315Z"
+    description: A Helm chart for Argo Workflows
+    digest: fa4e708f2b98dd89713da212912b6fa6cce4ecc04281754a8fed592144c8084b
+    home: https://github.com/argoproj/argo-helm
+    icon: https://raw.githubusercontent.com/argoproj/argo-workflows/master/docs/assets/argo.png
+    maintainers:
+    - name: alexec
+    - name: alexmt
+    - name: jessesuen
+    - name: benjaminws
+    name: argo-workflows
+    sources:
+    - https://github.com/argoproj/argo-workflows
+    type: application
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argo-workflows-0.8.1/argo-workflows-0.8.1.tgz
+    version: 0.8.1
   - annotations:
       artifacthub.io/changes: |
         - "[Added]: Initialize Changelog"
@@ -182,6 +275,28 @@ entries:
   argocd-applicationset:
   - annotations:
       artifacthub.io/changes: |
+        - "[Added]: Install the chart into a kind cluster during the chart testing process"
+        - "[Changed]: Parameter 'args.namespace' now defaults to the namespace where you install the chart to"
+    apiVersion: v2
+    appVersion: v0.2.0
+    created: "2021-11-12T15:40:57.049069366Z"
+    description: A Helm chart for installing ArgoCD ApplicationSet
+    digest: d5924d0c5a2d371092b4dbbae8008f33ad03369ee3d722be101670d35d1a6bc9
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argocd-applicationset.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - appset
+    - gitops
+    maintainers:
+    - name: maruina
+    name: argocd-applicationset
+    type: application
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argocd-applicationset-1.6.0/argocd-applicationset-1.6.0.tgz
+    version: 1.6.0
+  - annotations:
+      artifacthub.io/changes: |
         - "[Removed]: CRD installation via templates folder. CRDs are now only handled via the '/crds' folder in the same way like the ArgoCD chart."
         - "[Removed]: Exclude '/ci' folder from being packaged into the final chart archive."
         - "[Changed]: Fix icon url"
@@ -221,7 +336,53 @@ entries:
     urls:
     - https://github.com/zorgdomein/argo-helm/releases/download/argocd-applicationset-0.1.5/argocd-applicationset-0.1.5.tgz
     version: 0.1.5
+  argocd-image-updater:
+  - annotations:
+      artifacthub.io/changes: |
+        - "[Added]: Ability to expose metrics and deploy a Prometheus ServiceMonitor"
+    apiVersion: v2
+    appVersion: v0.10.1
+    created: "2021-11-12T15:40:57.249175481Z"
+    description: A Helm chart for Argo CD Image Updater, a tool to automatically update
+      the container images of Kubernetes workloads which are managed by Argo CD
+    digest: 4f973893bfa79559fa875bcfef4307984ff40ce36aba30ab173f456acfa624c1
+    home: https://github.com/argoproj-labs/argocd-image-updater
+    icon: https://argocd-image-updater.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - gitops
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argocd-image-updater
+    type: application
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argocd-image-updater-0.3.0/argocd-image-updater-0.3.0.tgz
+    version: 0.3.0
   argocd-notifications:
+  - annotations:
+      artifacthub.io/changes: |
+        - "[Changed]: Use helm-docs to generate README.md"
+    apiVersion: v2
+    appVersion: v1.1.1
+    created: "2021-11-12T15:40:57.456947618Z"
+    description: A Helm chart for ArgoCD notifications, an add-on to ArgoCD.
+    digest: d020b3aaa4ac840751bb7a8fd24cb85330f348530970f5e2565b0c9fca46af12
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argocd-notifications.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - argocd-notifications
+    maintainers:
+    - name: alexmt
+    - name: andyfeller
+    name: argocd-notifications
+    type: application
+    urls:
+    - https://github.com/zorgdomein/helm-charts-argocd/releases/download/argocd-notifications-1.5.2/argocd-notifications-1.5.2.tgz
+    version: 1.5.2
   - annotations:
       artifacthub.io/changes: |
         - "[Added]: Initialize Changelog"
@@ -263,4 +424,4 @@ entries:
     urls:
     - https://github.com/zorgdomein/argo-helm/releases/download/argocd-notifications-1.3.1/argocd-notifications-1.3.1.tgz
     version: 1.3.1
-generated: "2021-07-13T08:15:02.731922863Z"
+generated: "2021-11-12T15:40:57.457009719Z"
